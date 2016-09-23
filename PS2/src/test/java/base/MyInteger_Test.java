@@ -27,8 +27,39 @@ public class MyInteger_Test {
 	}
 
 	@Test
-	public void test() {
-		assertTrue(1==1);
+	
+	public void primeTest() {
+		assertTrue(MyInteger.isPrime(23));
 	}
-
+	@Test
+	public void oddTest() {
+		assertTrue(MyInteger.isOdd(23));
+	}
+	@Test
+	public void evenTest() {
+		assertTrue(MyInteger.isEven(741284));
+	}
+	@Test
+	public void equalTest() {
+		MyInteger jawn = new MyInteger(23);
+		assertTrue(jawn.equals(23));
+	}
+	@Test
+	
+	public void notPrimeTest() {
+		assertFalse(MyInteger.isPrime(45));
+	}
+	@Test
+	public void notOddTest() {
+		assertFalse(MyInteger.isOdd(2));
+	}
+	@Test
+	public void notEvenTest() {
+		assertFalse(MyInteger.isEven(23));
+	}
+	@Test
+	public void notEqualTest() {
+		MyInteger jawn = new MyInteger(23);
+		assertFalse(jawn.equals(45));
+	}	
 }

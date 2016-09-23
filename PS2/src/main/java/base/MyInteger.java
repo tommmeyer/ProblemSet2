@@ -51,6 +51,9 @@ public boolean isPrime(){
 	else if (getiValue() == 2){
 		primeJawn = true;
 	}
+	else if (getiValue() <= 0){
+		primeJawn = false;
+	}
 	else{
 	while(baseValue < getiValue()){
 		if ((getiValue()) % baseValue == 0){
@@ -71,6 +74,7 @@ public static boolean isPrime(int value){
 public static boolean isPrime (MyInteger value){
 	return value.isPrime();
 }
+
 public boolean equals(int value){
 	if (getiValue() == value){
 		return true;
